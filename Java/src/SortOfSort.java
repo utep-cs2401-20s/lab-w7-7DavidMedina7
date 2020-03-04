@@ -16,19 +16,54 @@ public class SortOfSort {
     // Case #5: Only single element in the array
     int[] array5 = {5};
 
-    sortOfMirror(array1);
+
+    sortOfSort(array1);
+
+
+
   }
 
-    public static void sortOfMirror(int[] array) {
+  public static void sortOfSort(int[] array) {
 
-        int maxNum = array[0];
+    // Printing out the array
+    printArray(array);
 
-        for (int i = 0; i < array.length; i++) {
+    // Making the first element in the array the MAX number
+    int maxNum = array[0];
 
-            if (array[i] > maxNum) {
-                maxNum = array[i];
-            }
-        }
-        System.out.println(maxNum);
+    // Counter to keep track of the elements that are already sorted
+    int counter = 0;
+
+    // Int i
+    int i = 0;
+
+    for (i = 0; i < array.length - counter; i++) {
+      // If the element at i is greater than the maxNum...
+      if (array[i] > maxNum) {
+        // Set that element as the MAX
+        maxNum = array[i];
+        System.out.println("maxNum is: " + maxNum);
+      }
     }
+
+
+
+
+
+
+  }
+
+    // Method to print the array
+    public static void printArray(int[] array) {
+
+      System.out.print("{ ");
+      for(int i = 0; i < array.length; i++) {
+
+          System.out.print(array[i] + " ");
+
+      }
+
+      System.out.print("}\n");
+    }
+
   }
